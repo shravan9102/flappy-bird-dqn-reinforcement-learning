@@ -1,4 +1,4 @@
-# 🐦 Flappy Bird AI using Deep Q-Learning (DQN)
+# 🐦 Flappy Bird AI using Deep Q-Learning (DQN).
 
 A Reinforcement Learning project in which an AI agent learns to play Flappy Bird autonomously using a Deep Q-Network (DQN) implemented with PyTorch.
 
