@@ -1,2 +1,169 @@
-# flappy-bird-dqn-reinforcement-learning
-A Deep Q-Learning agent that learns to play Flappy Bird using Reinforcement Learning and PyTorch.
+# 🐦 Flappy Bird AI using Deep Q-Learning (DQN)
+
+A Reinforcement Learning project in which an AI agent learns to play Flappy Bird autonomously using a Deep Q-Network (DQN) implemented with PyTorch.
+
+## 📌 Project Overview
+
+This project uses Deep Q-Learning to train an AI agent to play Flappy Bird through trial and error.
+
+The agent:
+
+* Observes the current game state
+* Selects an action
+* Receives a reward
+* Stores the experience
+* Learns from previous experiences
+* Improves its gameplay over time
+
+## 🧠 Reinforcement Learning Concepts Used
+
+* Deep Q-Network (DQN)
+* Q-Learning
+* Experience Replay
+* Target Network
+* Epsilon-Greedy Exploration
+* Exploration vs Exploitation
+* Neural Network Optimization
+
+## 🔄 Agent Workflow
+
+```text
+Environment
+     ↓
+Observe State
+     ↓
+Select Action
+     ↓
+Receive Reward
+     ↓
+Store Experience
+     ↓
+Sample Mini-Batch
+     ↓
+Train DQN
+     ↓
+Update Target Network
+```
+
+## 🏗️ Project Architecture
+
+The agent uses two neural networks:
+
+### Policy Network
+
+The Policy Network predicts Q-values for the available actions and is trained during the learning process.
+
+### Target Network
+
+The Target Network is used to calculate stable target Q-values and is periodically synchronized with the Policy Network.
+
+## 🎯 Epsilon-Greedy Strategy
+
+The agent balances exploration and exploitation using an epsilon-greedy strategy.
+
+* High epsilon → More random actions and exploration
+* Low epsilon → More actions based on learned Q-values
+
+Epsilon gradually decreases during training.
+
+## 🧠 Experience Replay
+
+The agent stores experiences in replay memory:
+
+```text
+(State, Action, Next State, Reward, Terminated)
+```
+
+Random mini-batches are sampled from this memory to train the DQN. This improves learning stability and reduces the correlation between consecutive experiences.
+
+## 🛠️ Technologies Used
+
+* Python
+* PyTorch
+* Gymnasium
+* Flappy Bird Gymnasium
+* PyYAML
+* Deep Learning
+* Reinforcement Learning
+
+## 📂 Project Structure
+
+```text
+flappy-bird-dqn/
+│
+├── agent.py
+├── dqn.py
+├── experience_replay.py
+├── parameters.yaml
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Go to the project directory:
+
+```bash
+cd flappy-bird-dqn
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## 🚀 Training
+
+Run the following command:
+
+```bash
+python agent.py <parameter_set> --train
+```
+
+Replace `<parameter_set>` with the parameter name defined in `parameters.yaml`.
+
+## 🎮 Testing
+
+To test the trained model:
+
+```bash
+python agent.py <parameter_set>
+```
+
+The trained model will be loaded and the agent will play the game automatically.
+
+## 📊 Training Process
+
+1. The agent observes the game state.
+2. An action is selected using the epsilon-greedy strategy.
+3. The environment returns the next state and reward.
+4. The experience is stored in Replay Memory.
+5. A random mini-batch is sampled.
+6. The Policy Network is trained.
+7. The Target Network is periodically synchronized.
+8. The best-performing model is saved.
+
+## 🔮 Future Improvements
+
+* Implement Double DQN
+* Implement Dueling DQN
+* Add Prioritized Experience Replay
+* Add training reward graphs
+* Add gameplay video/GIF
+* Improve model architecture
+
+## 👨‍💻 Author
+
+**Shravan Kumar**
+
+M.Tech Computer Science | AI/ML
+
+Interested in Data Science, Machine Learning, Deep Learning, Reinforcement Learning, NLP, and Generative AI.
