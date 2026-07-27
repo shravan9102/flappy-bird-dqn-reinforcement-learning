@@ -82,8 +82,8 @@ Random mini-batches are sampled from the replay memory to train the DQN. This he
 ## 📂 Project Structure
 
 ```text
-flappy-bird-dqn/
-│
+flappy-bird-dqn-reforcement-learning
+│├── game_flappy_bird.py
 ├── agent.py
 ├── dqn.py
 ├── experience_replay.py
@@ -98,7 +98,7 @@ flappy-bird-dqn/
 Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/shravan9102/flappy-bird-dqn-reinforcement-learning.git
 ```
 
 Navigate to the project directory:
